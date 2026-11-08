@@ -1,0 +1,689 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Приёмы недели из X · 8 ноября 2026</title><style>
+  :root{
+    --bg:#080810; --bg2:#0d0d18; --panel:#12121f; --panel2:#171727; --line:#262638;
+    --ink:#ececf5; --muted:#9a9ab0; --faint:#6b6b82;
+    --purple:#a78bfa; --purple-deep:#7c5cff; --green:#4ade80; --red:#fb7185;
+    --amber:#fbbf24; --blue:#60a5fa; --cyan:#22d3ee;
+    --radius:18px; --maxw:1120px;
+    --gutter:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(900px 500px at 78% -8%, rgba(124,92,255,.20), transparent 60%),
+      radial-gradient(800px 600px at 0% 18%, rgba(34,211,238,.07), transparent 55%),
+      radial-gradient(700px 600px at 100% 90%, rgba(167,139,250,.08), transparent 60%)}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-.02em;font-weight:700;margin:0}
+  ::selection{background:rgba(124,92,255,.35)}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:120;
+    background:linear-gradient(90deg,var(--purple-deep),var(--cyan));box-shadow:0 0 14px rgba(124,92,255,.7)}
+
+  nav{position:sticky;top:0;z-index:90;backdrop-filter:blur(14px);
+    background:rgba(8,8,16,.72);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:18px;padding:11px var(--gutter)}
+  .brand{font-family:'Space Grotesk';font-weight:700;font-size:15px;white-space:nowrap;display:flex;gap:9px;align-items:center}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--purple);box-shadow:0 0 12px var(--purple)}
+  .nav-links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0;-webkit-overflow-scrolling:touch}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{font-size:12.5px;color:var(--muted);padding:6px 11px;border-radius:9px;white-space:nowrap;transition:.18s;font-weight:500}
+  .nav-links a:hover{color:var(--ink);background:var(--panel2)}
+  .nav-links a.active{color:#fff;background:linear-gradient(135deg,var(--purple-deep),#5b3fd6)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+  section{padding-top:76px;padding-bottom:52px;scroll-margin-top:70px;border-top:1px solid rgba(255,255,255,.06)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding-top:54px;padding-bottom:40px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--purple);
+    border:1px solid rgba(167,139,250,.3);padding:6px 13px;border-radius:999px;background:rgba(124,92,255,.08)}
+  .hero h1{font-size:clamp(34px,6vw,60px);margin:22px 0 8px;background:linear-gradient(180deg,#fff 30%,#b9b4e8);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{font-size:clamp(16px,2.3vw,21px);color:var(--muted);max-width:780px;font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 4px}
+  .chip{font-family:'JetBrains Mono';font-size:12.5px;color:var(--ink);background:var(--panel);
+    border:1px solid var(--line);padding:7px 13px;border-radius:10px;display:flex;gap:7px;align-items:center}
+  .chip b{color:var(--purple);font-weight:700}
+
+  /* "О чём говорят" — featured lead card */
+  .talk{background:linear-gradient(160deg,var(--panel),#0e0e1a);border:1px solid var(--line);
+    border-left:3px solid var(--purple);border-radius:var(--radius);padding:26px 28px;position:relative;overflow:hidden;margin-top:24px}
+  .talk::before{content:"\1F525";position:absolute;top:-6px;right:14px;font-size:90px;opacity:.06;line-height:1}
+  .talk .lab{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .talk p{font-size:17px;font-weight:500;margin:0;color:#f1f0fb}
+  .talk .accent{color:var(--purple);font-weight:700}
+
+  /* section heading */
+  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+  .shead .num{font-family:'JetBrains Mono';font-size:13px;color:var(--purple);border:1px solid rgba(167,139,250,.3);
+    border-radius:8px;padding:3px 9px;background:rgba(124,92,255,.07)}
+  .shead h2{font-size:clamp(23px,3.4vw,32px)}
+  .lead{color:var(--muted);font-size:16px;max-width:800px;margin:-8px 0 26px}
+
+  /* deep-link pill -> твит */
+  .src{font-family:'JetBrains Mono';font-size:12px;color:var(--cyan);border:1px solid rgba(34,211,238,.28);
+    background:rgba(34,211,238,.06);padding:3px 9px;border-radius:7px;white-space:nowrap;transition:.16s;display:inline-flex;gap:6px;align-items:center}
+  .src:hover{background:rgba(34,211,238,.18);color:#fff;border-color:var(--cyan)}
+  .src svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2}
+
+  /* ================= ГЛАВНЫЙ КОМПОНЕНТ: карточка приёма ================= */
+  .tricks{display:flex;flex-direction:column;gap:22px}
+  .trick{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;transition:.22s;position:relative;overflow:hidden}
+  .trick:hover{border-color:rgba(167,139,250,.4);box-shadow:0 14px 40px rgba(0,0,0,.4)}
+  .trick-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:8px}
+  .trick-head .tnum{font-family:'Space Grotesk';font-weight:700;font-size:22px;color:var(--purple-deep);
+    background:rgba(124,92,255,.12);border:1px solid rgba(124,92,255,.25);border-radius:10px;
+    min-width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .trick-head h3{font-size:21px;line-height:1.2;padding-top:6px}
+  /* кто сказал + кто поддержал */
+  .who{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:2px 0 18px;padding-left:56px;font-size:13px}
+  @media(max-width:560px){.who{padding-left:0}}
+  .who .lbl{color:var(--faint);font-size:12.5px}
+  .au{font-family:'JetBrains Mono';font-size:12.5px;color:var(--ink);background:rgba(124,92,255,.10);
+    border:1px solid rgba(124,92,255,.22);padding:3px 9px;border-radius:999px;transition:.16s}
+  .au:hover{background:rgba(124,92,255,.22);color:#fff}
+  .au.sec{color:var(--muted);background:var(--panel2);border-color:var(--line)}
+
+  /* проблема и решение */
+  .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin:4px 0 16px}
+  @media(max-width:680px){.ba{grid-template-columns:1fr;gap:10px}.ba .arrow{transform:rotate(90deg);justify-self:center}}
+  .ba .cell{border-radius:13px;padding:15px 17px;border:1px solid var(--line)}
+  .ba .was{background:rgba(251,113,133,.05);border-color:rgba(251,113,133,.22)}
+  .ba .now{background:rgba(74,222,128,.05);border-color:rgba(74,222,128,.22)}
+  .ba .lab{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px;display:block}
+  .ba .was .lab{color:var(--red)} .ba .now .lab{color:var(--green)}
+  .ba .cell p{margin:0;font-size:14.5px;color:var(--ink)}
+  .ba .arrow{display:flex;align-items:center;justify-content:center;color:var(--purple);font-size:24px;font-weight:700}
+
+  .why{font-size:14.5px;color:var(--muted);margin:0 0 18px}
+  .why b{color:var(--ink)}
+
+  /* «Как применить» */
+  .try{background:linear-gradient(150deg,rgba(124,92,255,.07),rgba(34,211,238,.04));
+    border:1px solid rgba(124,92,255,.20);border-radius:13px;padding:16px 18px;margin-bottom:16px}
+  .try-lab{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.06em;color:var(--purple);
+    text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+  .try ul{margin:0;padding-left:20px}
+  .try li{font-size:14.5px;color:var(--ink);margin:6px 0}
+  .try li::marker{color:var(--purple)}
+  .try .measure{color:var(--faint);font-style:italic}
+  .k{font-family:'JetBrains Mono';font-size:.9em;color:var(--purple);background:rgba(124,92,255,.10);padding:1px 6px;border-radius:5px;border:1px solid rgba(124,92,255,.18)}
+
+  .links{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--faint);padding-top:4px}
+  .links .lk{font-size:14px;margin-right:2px}
+
+  /* медиа из твита (реальная картинка) */
+  figure{margin:14px 0 0}
+  .shot{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#0c0c16;cursor:zoom-in;position:relative;transition:.22s}
+  .shot:hover{border-color:var(--purple);box-shadow:0 0 0 1px var(--purple),0 12px 36px rgba(124,92,255,.25)}
+  .shot img{width:auto;max-width:100%;height:auto;display:block;margin-inline:auto}
+  .shot .badge{position:absolute;top:9px;left:9px;font-family:'JetBrains Mono';font-size:10.5px;color:#fff;
+    background:rgba(0,0,0,.62);backdrop-filter:blur(4px);padding:4px 8px;border-radius:6px;border:1px solid rgba(255,255,255,.14)}
+  .shot .zoom{position:absolute;top:9px;right:9px;width:26px;height:26px;border-radius:6px;background:rgba(0,0,0,.55);
+    display:flex;align-items:center;justify-content:center;opacity:0;transition:.2s}
+  .shot:hover .zoom{opacity:1}
+  .shot .zoom svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+  figcaption{font-size:13px;color:var(--faint);margin-top:9px;padding:0 2px}
+  figcaption b{color:var(--muted);font-weight:600}
+
+  /* your own SVG diagram canvas (по желанию) */
+  .canvas{background:radial-gradient(circle at 50% 0%,#0c0c16,#060609);border:1px solid var(--line);border-radius:14px;padding:10px;margin-top:14px}
+  .canvas svg{width:100%;height:auto;display:block;border-radius:12px}
+  .cap-hand{font-family:'Caveat';font-size:15px;color:var(--faint);text-align:center;padding:6px 0 4px}
+
+  /* «На что обратить внимание» */
+  .watch{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:780px){.watch{grid-template-columns:1fr}}
+  .watch-item{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px 19px;transition:.18s}
+  .watch-item:hover{border-color:rgba(167,139,250,.35)}
+  .watch-item h4{font-family:'Space Grotesk';font-size:16px;margin:0 0 7px;display:flex;gap:9px;align-items:baseline}
+  .watch-item h4 .em{font-size:18px}
+  .watch-item p{margin:0 0 10px;font-size:14px;color:var(--muted)}
+  .watch-item .who{padding-left:0;margin:0 0 8px}
+
+  /* «Мой план на неделю» — чек-лист */
+  .checks{display:grid;grid-template-columns:1fr;gap:12px}
+  .check{display:flex;gap:13px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);
+    border-radius:12px;padding:15px 17px;cursor:pointer;transition:.18s;user-select:none}
+  .check:hover{border-color:rgba(167,139,250,.4);background:var(--panel2)}
+  .check .box{width:22px;height:22px;border-radius:6px;border:2px solid var(--faint);flex:0 0 auto;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:.18s}
+  .check .box svg{width:13px;height:13px;stroke:#fff;stroke-width:3;fill:none;opacity:0;transition:.18s}
+  .check.done .box{background:var(--green);border-color:var(--green)}
+  .check.done .box svg{opacity:1}
+  .check.done .txt{color:var(--faint);text-decoration:line-through}
+  .check .txt{font-size:15px;color:var(--ink)}
+  .check .txt b{color:var(--purple);font-weight:600}
+  .check .when{font-family:'JetBrains Mono';font-size:11px;color:var(--amber);border:1px solid rgba(251,191,36,.25);
+    background:rgba(251,191,36,.06);padding:2px 7px;border-radius:6px;margin-left:auto;white-space:nowrap;flex:0 0 auto}
+
+  /* метаданные */
+  .meta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:13.5px;color:var(--muted)}
+  .meta div{padding:5px 0;border-bottom:1px solid var(--line)}
+  .meta div:last-child{border-bottom:none}
+  .meta b{color:var(--faint);font-family:'JetBrains Mono';font-size:12px;font-weight:600;margin-right:8px}
+
+  footer{padding:46px var(--gutter) 70px;color:var(--faint);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:24px}
+  footer a{color:var(--purple)}
+
+  #lb{position:fixed;inset:0;z-index:200;background:rgba(4,4,9,.93);backdrop-filter:blur(8px);
+    display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px;cursor:zoom-out}
+  #lb.on{display:flex;animation:fade .2s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  #lb img{max-width:94vw;max-height:80vh;border-radius:12px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+  #lb .lbcap{color:var(--muted);font-size:14px;margin-top:16px;max-width:760px;text-align:center}
+  #lb .lbbtn{margin-top:14px;display:inline-flex;gap:8px;align-items:center;background:var(--purple-deep);color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer}
+  #lb .lbbtn svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2}
+  #lb .close{position:absolute;top:20px;right:24px;color:#fff;font-size:30px;opacity:.7;cursor:pointer}
+
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+  .rv.in{opacity:1;transform:none}
+
+  @media(max-width:640px){
+    :root{--gutter:18px;--radius:14px}
+    body{font-size:15.5px;line-height:1.6}
+    .nav-in{padding:10px var(--gutter);gap:12px}
+    .brand{font-size:13.5px}
+    .hero{padding-top:24px;padding-bottom:24px}
+    .hero h1{font-size:clamp(25px,7.2vw,32px);margin:14px 0 10px;line-height:1.18}
+    .hero .sub{font-size:15.5px;line-height:1.55}
+    .eyebrow{font-size:11px;padding:5px 11px;letter-spacing:.12em}
+    section{padding-top:52px;padding-bottom:36px;scroll-margin-top:56px}
+    .shead{margin-bottom:20px}
+    .shead h2{font-size:24px}
+    .lead{font-size:15px}
+    .talk{padding:20px 18px}
+    .trick{padding:20px 18px}
+    .quote{padding:16px 18px}
+    .check{padding:12px 14px;gap:11px}
+    .check .txt{font-size:13.5px}
+    footer{padding:36px var(--gutter) 60px;font-size:12.5px}
+  }
+
+.shot img{width:auto;max-width:100%;height:auto;display:block;margin-inline:auto}#lb img{border:0}
+</style>
+<style data-visual-html-responsive="v1">
+:root {
+  --page-gutter: 22px;
+  --gutter: 22px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: visible !important;
+}
+
+.wrap,
+.nav-in,
+footer,
+[data-mobile-container] {
+  width: 100% !important;
+  margin-inline: auto;
+  padding-inline: var(--page-gutter) !important;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+.grid > *,
+.hero-grid > *,
+.split > *,
+.quotes > *,
+.checks > *,
+.facts > *,
+.tools > *,
+.debate > *,
+.nav-links,
+.navlinks,
+.shead > *,
+.sec-head > *,
+.tl-item,
+.timeline > *,
+[data-mobile-stack] > * {
+  min-width: 0;
+}
+
+img,
+video,
+audio,
+canvas,
+iframe,
+figure {
+  max-width: 100% !important;
+}
+
+img,
+video,
+canvas {
+  height: auto;
+}
+
+video,
+audio,
+iframe {
+  display: block;
+  width: 100% !important;
+}
+
+iframe {
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+svg {
+  max-width: 100%;
+}
+
+pre,
+table,
+.tbl,
+[data-mobile-scroll] {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+table,
+.tbl {
+  display: block;
+}
+
+[data-mobile-scroll] > svg {
+  width: 640px !important;
+  min-width: 640px !important;
+  max-width: none !important;
+  height: auto;
+}
+
+.k,
+.srcline,
+.srcline code,
+.eyebrow,
+.chip,
+.pill,
+.tag,
+.au,
+.src,
+.tc,
+.t,
+.timecode,
+.trick-head h3,
+.item-head h3,
+.check .txt,
+.talk p,
+.trick p,
+.trick li,
+.item p,
+.item li,
+.card p,
+.card li,
+.quote .q,
+.quote .ru,
+blockquote .ru,
+.tl-item p,
+.timeline p,
+.deb li,
+.callout,
+.fact .d,
+.tool .desc,
+[data-mobile-copy],
+[data-mobile-copy] p,
+[data-mobile-copy] li,
+[data-mobile-copy] dd,
+[data-mobile-wrap],
+code:not(pre code),
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.eyebrow,
+.chip,
+.pill,
+.tag,
+.au,
+.src,
+.links .src {
+  max-width: 100%;
+}
+
+.src,
+.links .src {
+  white-space: normal !important;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-gutter: 18px;
+    --gutter: 18px;
+    --radius: 14px;
+  }
+
+  .nav-in,
+  nav .wrap {
+    min-height: 60px;
+    height: auto !important;
+    gap: 8px !important;
+    padding-block: 8px !important;
+  }
+
+  .brand,
+  .navbrand {
+    display: none !important;
+  }
+
+  .nav-links,
+  .navlinks {
+    width: 100%;
+    margin-left: 0 !important;
+    padding-bottom: 2px;
+    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .nav-links::-webkit-scrollbar,
+  .navlinks::-webkit-scrollbar {
+    display: block;
+    height: 2px;
+  }
+
+  nav a,
+  a.src,
+  a.tc,
+  a.t,
+  a.timecode,
+  a.btn,
+  button,
+  [role="button"],
+  .lbbtn,
+  #lb .close,
+  .lightbox .close,
+  [data-seek] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  nav a,
+  a.src,
+  a.tc,
+  a.t,
+  a.timecode,
+  a.btn,
+  button,
+  [role="button"],
+  .lbbtn,
+  #lb .close,
+  .lightbox .close,
+  a[data-seek],
+  button[data-seek],
+  span[data-seek] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .navlinks a {
+    flex: 0 0 auto;
+    padding: 9px 8px !important;
+  }
+
+  section {
+    padding-block: 52px 36px !important;
+    scroll-margin-top: 56px !important;
+  }
+
+  header.hero,
+  .hero {
+    padding-block: 24px 24px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8vw, 36px) !important;
+    line-height: 1.1;
+    margin-top: 18px;
+  }
+
+  .g2,
+  .g3,
+  .g4,
+  .grid:not(.g2):not(.g3):not(.g4),
+  .hero-grid,
+  .split,
+  .quotes,
+  .checks,
+  .facts,
+  .tools,
+  .debate,
+  [data-mobile-stack="grid"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  [data-mobile-stack="flex"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .canvas:not([data-mobile-diagram="reflow"]),
+  figure:not([data-mobile-diagram="reflow"]):has(> svg[viewBox]) {
+    max-width: 100%;
+    overflow-x: auto !important;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .canvas:not([data-mobile-diagram="reflow"]) > svg[viewBox]:not([data-mobile-diagram="reflow"]),
+  figure:not([data-mobile-diagram="reflow"]) > svg[viewBox]:not([data-mobile-diagram="reflow"]) {
+    width: 640px !important;
+    min-width: 640px !important;
+    max-width: none !important;
+    height: auto;
+  }
+
+  .talk,
+  .trick,
+  .item,
+  .card,
+  .quote,
+  .fact,
+  .check:not(ul),
+  .check > li,
+  .deb,
+  .thesis,
+  .thesis-card,
+  blockquote,
+  .callout,
+  [data-mobile-card] {
+    padding: 20px 18px !important;
+  }
+
+  blockquote {
+    margin-inline: 0 !important;
+  }
+
+  .trick-head,
+  .item-head,
+  .shead,
+  .sec-head,
+  .code .bar,
+  .tl-head,
+  blockquote footer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .shead,
+  .sec-head {
+    align-items: flex-start;
+    margin-bottom: 20px !important;
+  }
+
+  .shead h2,
+  .sec-head h2 {
+    font-size: 24px !important;
+  }
+
+  .shead .src,
+  .sec-head .src {
+    margin-left: 0 !important;
+  }
+
+  .trick-head .tnum,
+  .item-head .tnum {
+    min-width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
+
+  .trick-head h3,
+  .item-head h3 {
+    padding-top: 4px;
+    font-size: 20px;
+  }
+
+  .who {
+    padding-left: 0;
+  }
+
+  .about,
+  .key,
+  .try,
+  .risk {
+    padding: 15px 16px;
+  }
+
+  .hero .sub,
+  .hero .lede,
+  .hero .lead,
+  .lead,
+  .lede,
+  .sec-sub,
+  .talk p,
+  .trick p,
+  .trick li,
+  .item p,
+  .item li,
+  .card p,
+  .card li,
+  .quote .q,
+  .quote .ru,
+  blockquote .ru,
+  .tl-item p,
+  .timeline p,
+  .check .txt,
+  .check > li,
+  .deb li,
+  .callout,
+  .fact .d,
+  .tool .desc,
+  .watch-item p,
+  [data-mobile-copy],
+  [data-mobile-copy] p,
+  [data-mobile-copy] li,
+  [data-mobile-copy] dd {
+    font-size: 16px !important;
+  }
+
+  .fact {
+    align-items: flex-start;
+  }
+
+  .fact .v {
+    min-width: 0 !important;
+  }
+
+  .tl {
+    padding-left: 24px;
+  }
+
+  .tl-thumbs .shot {
+    width: 100% !important;
+  }
+
+  .links {
+    align-items: stretch;
+  }
+
+  .links .src {
+    min-height: 44px;
+    padding: 9px 11px;
+  }
+
+  .check:not(ul) {
+    flex-wrap: wrap;
+  }
+
+  .check .txt {
+    flex: 1 1 220px;
+  }
+
+  #lb,
+  .lightbox {
+    padding: 16px !important;
+  }
+
+  footer {
+    padding-block: 36px 60px !important;
+  }
+}
+</style>
+</head><body><div id="progress"></div><nav><div class="nav-in"><div class="brand"><span class="dot"></span>X Weekly Digest</div><div class="nav-links"><a href="#talk">О чём говорят</a><a href="#tricks">Приёмы</a><a href="#watch">На заметку</a><a href="#plan">План</a></div></div></nav><header class="wrap hero"><span class="eyebrow">8 НОЯБРЯ 2026 · BACKEND / AGENTS</span><h1>Приёмы недели из X</h1><p class="sub">Проверяемые изменения, переносимый контекст и ограниченное делегирование: двенадцать практик для работы с агентами.</p><div class="chips"><span class="chip">1–8 ноября</span><span class="chip">12 приёмов</span><span class="chip">3 на заметку</span></div><div class="talk rv" id="talk"><div class="lab">О чём говорят</div><p>На этой неделе практики сходятся вокруг <span class="accent">проверки результата</span> и <span class="accent">состояния вне беседы</span>. Один агент делегирует с явными границами, другой получает wiki для продолжения работы, а проверка становится частью самой задачи. Небольшие команды полезны, когда у них понятны ограничения.</p></div></header><section id="tricks" class="wrap"><div class="shead rv"><h2>Главные приёмы недели</h2></div><div class="tricks"><article class="trick rv" id="trick-1" data-card-id="2118755687274532893"><div class="trick-head"><span class="tnum">01</span><h3>Делегируйте задачи с чёткими границами и проверяйте diff</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/thdxr" target="_blank" rel="noopener">@thdxr</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Когда основной агент передаёт работу subagents, нужно проверить границы задачи и получившиеся изменения. Автор не описывает конкретную ошибку прежней попытки.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Команда держит долгие сессии для каждого проекта. Opus передаёт всю работу DeepSeek subagents, строго задаёт scope, требует подтверждение выполненной работы и затем просматривает diff.</p></div></div><p class="why"><b>Что даёт приём:</b> Границы задачи задаются до выполнения, а результат проверяется по подтверждениям и изменениям кода. Это описанный порядок контроля; величину выигрыша автор не приводит.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Для проверки подхода предлагаем выбрать задачу в своём проекте и поручить Opus делегировать её DeepSeek subagent с явными границами.</li><li>Попросите подтверждение выполненной работы вместо одного пересказа результата; затем просмотрите diff.</li><li class="measure">Измерьте в своём эксперименте число выходов за scope и число правок после просмотра diff. Это предложенная проверка редакции.</li></ul></div><p class="why"><b>Ограничение:</b> Автор сообщает о хорошем опыте, но не приводит сравнительных замеров, точного prompt и настроек моделей.</p><div class="links"><a class="src" href="https://x.com/thdxr/status/2118755687274532893" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-2" data-card-id="2118820434280144996"><div class="trick-head"><span class="tnum">02</span><h3>Делите изображения между subagents по 20</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/lydiahallie" target="_blank" rel="noopener">@lydiahallie</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Если subagent читает больше изображений, чем помещается в один запрос, старые изображения удаляются. Он считает, что ещё не читал их, и открывает повторно.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Lydia Hallie предлагает временный обход: попросить Claude распределить изображения так, чтобы каждый subagent прочитал не больше 20.</p></div></div><p class="why"><b>Что даёт приём:</b> Это обход описанного автором цикла повторного чтения; его результат стоит проверить в своей сессии.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Адаптация редакции: для задачи с большим числом изображений заранее разделите их на партии максимум по 20.</li><li>Передайте Claude правило: каждый subagent читает только свою партию и возвращает результат её разбора.</li><li class="measure">Измерение, адаптация редакции: посчитайте повторные открытия одних и тех же изображений в trace и число разобранных изображений.</li></ul></div><p class="why"><b>Ограничение:</b> Это временный обход конкретной ошибки. Автор сообщила, что исправление ожидается в начале следующей недели; его выпуск здесь не проверен.</p><div class="links"><a class="src" href="https://x.com/lydiahallie/status/2118820434280144996" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-3" data-card-id="2117571010660581804"><div class="trick-head"><span class="tnum">03</span><h3>Ведите wiki отдельно от истории беседы</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/mattpocockuk" target="_blank" rel="noopener">@mattpocockuk</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>При смене harness нужна опора на знания вне прежней беседы.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Каждый агент постепенно собирает wiki. Matt использует её, чтобы отбрасывать историю беседы и при необходимости менять harness; агенты также знают о его skill pack.</p></div></div><p class="why"><b>Что даёт приём:</b> Wiki хранит знания отдельно от истории. Автор связывает с ней возможность сбрасывать беседу и менять harness.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Адаптация редакции: выберите одну предметную область проекта и поручите агенту вести по ней wiki с решениями и текущим состоянием.</li><li>Адаптация редакции: начните новую беседу и передайте ей wiki; при необходимости отдельно подключите используемые skills.</li><li class="measure">Измерение, адаптация редакции: дайте новой беседе несколько контрольных вопросов о решениях проекта и посчитайте ответы, которые потребовали возврата к старой истории.</li></ul></div><p class="why"><b>Ограничение:</b> В посте нет структуры wiki, правил обновления и замеров переноса контекста. Предложенные шаги проверки принадлежат редакции.</p><div class="links"><a class="src" href="https://x.com/mattpocockuk/status/2117571010660581804" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-4" data-card-id="2117953152376799498"><div class="trick-head"><span class="tnum">04</span><h3>Проектируйте независимо проверяемые модули</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/mattpocockuk" target="_blank" rel="noopener">@mattpocockuk</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>При работе через агента одной оценки читаемости кода недостаточно: нужно понимать, как проверить поведение изменяемого модуля.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Matt предлагает проектировать модули так, чтобы их можно было тестировать и проверять независимо. Названия в коде должны совпадать с предметным языком человека, который описывает изменения.</p></div></div><p class="why"><b>Что даёт приём:</b> Независимая проверка даёт агенту способ исследовать поведение модуля. Общий предметный язык связывает формулировку задачи с именами в коде.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Адаптация редакции: выберите модуль, который агент регулярно меняет, и найдите способ проверить его поведение отдельно.</li><li>Адаптация редакции: устраните препятствие для этой проверки и сопоставьте имена функций и сущностей с языком задач команды.</li><li class="measure">Измерение, адаптация редакции: поручите агенту небольшое изменение и зафиксируйте, удалось ли проверить модуль отдельно и какие зависимости пришлось запускать.</li></ul></div><p class="why"><b>Ограничение:</b> Пример со 100% test coverage иллюстративный. Пост не доказывает, что агенту требуется нулевое время на понимание кода или что сложность и читаемость никогда не влияют на результат.</p><div class="links"><a class="src" href="https://x.com/mattpocockuk/status/2117953152376799498" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-5" data-card-id="2118313863917564136"><div class="trick-head"><span class="tnum">05</span><h3>Просите агента сделать изменение полностью проверяемым</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/mattpocockuk" target="_blank" rel="noopener">@mattpocockuk</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>После изменения кода нужно определить, как подтвердить его работу в реальной среде. Одного написанного изменения для этого недостаточно.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Matt использует prompt «How do we make this change fully verifiable?». По его описанию, агент ищет способы проверить изменения, вплоть до реальных сервисов и кликов во frontend.</p></div></div><p class="why"><b>Что даёт приём:</b> Вопрос делает способ проверки явной частью задачи агента. Примеры автора охватывают проверку вне текста кода.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Задайте агенту вопрос: «How do we make this change fully verifiable?»</li><li>Адаптация редакции: выберите из предложенных проверок те, которые подтверждают нужное поведение; внешние регистрации и действия согласуйте отдельно.</li><li class="measure">Измерение, адаптация редакции: перечислите заявленные поведения и отметьте, для скольких есть результат выполненной проверки.</li></ul></div><p class="why"><b>Ограничение:</b> Автор сообщает о личном улучшении качества без измерений и сравнительного эксперимента. Вопрос сам по себе не гарантирует полноту проверки и не разрешает агенту внешние действия.</p><div class="links"><a class="src" href="https://x.com/mattpocockuk/status/2118313863917564136" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-6" data-card-id="2118971805885239777"><div class="trick-head"><span class="tnum">06</span><h3>Просите агента углублять модули и упрощать интерфейсы</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/_khrus" target="_blank" rel="noopener">@_khrus</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Автор описывает задачу борьбы с повторением кода и неудачными абстракциями при AI-разработке; исходные примеры кода не приведены.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Автор использует prompt «deepen modules and simplify interfaces», запускает такой проход на каждом PR и ночную автоматизацию для отложенного обслуживания.</p></div></div><p class="why"><b>Что даёт приём:</b> По личному опыту автора, запрос направляет агента на устранение дублирования и централизацию основной функциональности. Он сообщает об улучшении согласованности, исправлении ошибок и сокращении кода.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Используйте формулировку автора: «deepen modules and simplify interfaces».</li><li>Адаптация редакции: ограничьте проход одним изменяемым модулем и попросите показать, какие детали скрывает интерфейс и какое дублирование устранено.</li><li class="measure">Измерение, адаптация редакции: сопоставьте поведение до и после, число точек вызова и объём дублирования; проверьте результат тестами, а сокращение строк учитывайте отдельно.</li></ul></div><p class="why"><b>Ограничение:</b> Это личный опыт без сравнения и измерений. Меньше строк не доказывает улучшение дизайна; prompt не гарантирует исправления ошибок. Автор связывает идею с книгой John Ousterhout Philosophy of Software Design.</p><div class="links"><a class="src" href="https://x.com/_khrus/status/2118971805885239777" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-7" data-card-id="2118063143167693011"><div class="trick-head"><span class="tnum">07</span><h3>Составляйте status updates по коротким заметкам</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/ClaudeDevs" target="_blank" rel="noopener">@ClaudeDevs</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Каждые 30 секунд работающий фоновый subagent обновляет строку статуса. Раньше для каждого обновления заново читалась вся его беседа.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Теперь Haiku 5.5 пишет статус по коротким заметкам. Сам subagent сохраняет собственную модель. По заявлению ClaudeDevs, одно обновление обходится примерно на 99% дешевле.</p></div></div><p class="why"><b>Что даёт приём:</b> Сокращение относится к служебной операции обновления статуса. Автор отдельно сообщает примерно о 5% меньшем расходе лимита в сессиях с фоновыми subagents и примерно о 6% большем числе prompts.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Обновите Claude Code до v2.1.316 или новее; автор сообщает о доступности для большинства пользователей Pro, Max и Ultra и всех пользователей Team и Enterprise.</li><li>Адаптация редакции: выполните привычную задачу с фоновым subagent и проверьте, что его модель не изменилась из-за механизма генерации статуса.</li><li class="measure">Измерение, адаптация редакции: сравните расход лимита на сопоставимых задачах; отдельно учитывайте обновления статуса и работу самого subagent.</li></ul></div><p class="why"><b>Ограничение:</b> 99% относится к стоимости одного обновления статуса, а не всей сессии. Проценты расхода лимита — заявление автора, методика и выборка не приведены.</p><figure><div class="shot" data-full="assets/img-2118063143167693011.jpg" data-href="https://x.com/ClaudeDevs/status/2118063143167693011" data-cap="Схема автора сравнивает полную беседу с short notes. Около 99% относится к одному status update, а не ко всей сессии." data-full-width="1200" data-full-height="675"><img style="max-width:min(100%,600.0px)!important" src="assets/img-2118063143167693011.jpg" alt="Схема автора сравнивает полную беседу с short notes. Около 99% относится к одному status update, а не ко всей сессии." loading="lazy"><button class="zoom" aria-label="Увеличить изображение"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button></div><figcaption>Схема автора сравнивает полную беседу с short notes. Около 99% относится к одному status update, а не ко всей сессии.</figcaption></figure><div class="links"><a class="src" href="https://x.com/ClaudeDevs/status/2118063143167693011" target="_blank" rel="noopener">Главный пост ↗</a><a class="src" href="https://x.com/ClaudeDevs/status/2118063144572772627" target="_blank" rel="noopener">Уточнение автора ↗</a></div></article><article class="trick rv" id="trick-8" data-card-id="2117332449382510884"><div class="trick-head"><span class="tnum">08</span><h3>Передавайте в Messages API только новые сообщения</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/ClaudeDevs" target="_blank" rel="noopener">@ClaudeDevs</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>До описанного изменения клиент повторно отправлял полную беседу на каждом ходе.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Message threads доступны в публичной бете Messages API: сервер хранит беседу между ходами, а клиент передаёт новые сообщения и ID предыдущего сообщения.</p></div></div><p class="why"><b>Что даёт приём:</b> Перенос хранения беседы на сервер позволяет не отправлять всю историю повторно. По сообщению автора, Claude начинает отвечать раньше.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Адаптация редакции: выделите тестовую многоходовую беседу и зафиксируйте текущий объём запросов.</li><li>Инженерный паттерн: храните ID предыдущего сообщения и передавайте его с новыми сообщениями; точные поля и вызовы нужно сверить с документацией API.</li><li class="measure">Измерение, адаптация редакции: сравните размер запросов и время до начала ответа при одинаковой беседе с полной историей и с thread.</li></ul></div><p class="why"><b>Ограничение:</b> Это публичная бета. В посте нет схемы запросов, правил хранения, обработки ветвлений и количественных замеров; карточка описывает инженерный паттерн, а не готовый рецепт интеграции.</p><div class="links"><a class="src" href="https://x.com/ClaudeDevs/status/2117332449382510884" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-9" data-card-id="2118795192090386454"><div class="trick-head"><span class="tnum">09</span><h3>Сохраняйте окружение Claude Code cloud для следующих сессий</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/ClaudeDevs" target="_blank" rel="noopener">@ClaudeDevs</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Для запуска репозитория облачной сессии нужны зависимости, сетевой доступ и API-ключи.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>По сообщению ClaudeDevs, Claude определяет нужные зависимости, сетевой доступ и API-ключи, затем сохраняет окружение для следующего запуска. Это описано для Pro, Max и Ultra.</p></div></div><p class="why"><b>Что даёт приём:</b> Сохранённое окружение можно использовать в следующей сессии. Автор утверждает, что ключи хранятся безопасно и Claude их не видит.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Адаптация редакции: выберите репозиторий с проверяемой командой запуска и откройте облачную сессию Claude Code.</li><li>Инженерный паттерн: проверьте определённые зависимости и доступы, настройте окружение и повторно откройте репозиторий; конкретные настройки в посте не описаны.</li><li class="measure">Измерение, адаптация редакции: сравните время до успешного запуска и число ручных действий в первой и повторной сессиях.</li></ul></div><p class="why"><b>Ограничение:</b> В посте нет формата конфигурации, интерфейса выдачи доступов, списка поддерживаемых окружений и модели защиты ключей. Заявление о невидимости ключей принадлежит автору; здесь оно независимо не проверено.</p><div class="links"><a class="src" href="https://x.com/ClaudeDevs/status/2118795192090386454" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-10" data-card-id="2118973784162238748"><div class="trick-head"><span class="tnum">10</span><h3>Оставьте браузер на рабочем компьютере, а агента запустите удалённо</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/thdxr" target="_blank" rel="noopener">@thdxr</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>У автора агент работает на удалённом сервере, а браузеры находятся на desktop и ноутбуке.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>OpenCode Browse поддерживает размещение агента и браузеров на разных машинах. Автор реализовал это для своей удалённой среды и использует управление браузерами desktop и ноутбука.</p></div></div><p class="why"><b>Что даёт приём:</b> Агент и браузер не обязаны работать на одной машине. Это даёт конкретную схему применения для разработки с удалённым сервером.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Для проверки подхода предлагаем изучить настройку соединения между удалённым агентом и локальным браузером в OpenCode Browse.</li><li>После настройки поручите удалённому агенту небольшую браузерную задачу на своём компьютере.</li><li class="measure">Зафиксируйте, выполнена ли задача, и число потерянных соединений за запуск. Это измерение редакции, а не результат автора.</li></ul></div><p class="why"><b>Ограничение:</b> Локальный пост подтверждает топологию и личное использование, но не раскрывает настройку соединения, разрешения и требования доступа.</p><div class="links"><a class="src" href="https://x.com/thdxr/status/2118973784162238748" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-11" data-card-id="2118863157569737109"><div class="trick-head"><span class="tnum">11</span><h3>Продолжайте pushed branches в Claude Code Projects</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/lydiahallie" target="_blank" rel="noopener">@lydiahallie</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Работу над веткой нужно продолжить в другом интерфейсе агента.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Lydia предлагает добавить репозиторий и попросить Claude подобрать pushed branches. Multiplayer пока отсутствует.</p></div></div><p class="why"><b>Что даёт приём:</b> Ветка в репозитории служит точкой передачи работы.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Добавьте свой репозиторий в Claude Code Projects.</li><li>Адаптация редакции: выберите тестовую pushed branch и попросите продолжить конкретную задачу.</li><li class="measure">Проверьте выбранную ветку и diff; посчитайте исправления, понадобившиеся после переноса.</li></ul></div><p class="why"><b>Ограничение:</b> Доступность и точные шаги настройки не проверены. Автор отдельно предупреждает, что multiplayer пока нет.</p><figure><div class="shot" data-full="assets/img-2118863157569737109.jpg" data-href="https://x.com/lydiahallie/status/2118863157569737109" data-cap="Исходный интерфейс проекта показывает выбор продолжения работы и отдельные threads." data-full-width="1200" data-full-height="675"><img style="max-width:min(100%,600.0px)!important" src="assets/img-2118863157569737109.jpg" alt="Исходный интерфейс проекта показывает выбор продолжения работы и отдельные threads." loading="lazy"><button class="zoom" aria-label="Увеличить изображение"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button></div><figcaption>Исходный интерфейс проекта показывает выбор продолжения работы и отдельные threads.</figcaption></figure><div class="links"><a class="src" href="https://x.com/lydiahallie/status/2118863157569737109" target="_blank" rel="noopener">Главный пост ↗</a></div></article><article class="trick rv" id="trick-12" data-card-id="2118045439803195567"><div class="trick-head"><span class="tnum">12</span><h3>Проверяйте место на диске через /storage</h3></div><div class="who"><span class="lbl">источник:</span><a class="au" href="https://x.com/lydiahallie" target="_blank" rel="noopener">@lydiahallie</a></div><div class="ba"><div class="cell was"><span class="lab">Проблема</span><p>Claude desktop хранит задачи и worktrees на компьютере. Неактивные задачи и неиспользуемые worktrees можно удалить через интерфейс управления хранилищем.</p></div><div class="arrow">→</div><div class="cell now"><span class="lab">Решение автора</span><p>Команда /storage показывает, сколько места занимает Claude, и позволяет очистить неактивные задачи и неиспользуемые worktrees.</p></div></div><p class="why"><b>Что даёт приём:</b> Команда связывает просмотр расхода диска с очисткой конкретных категорий данных внутри desktop app.</p><div class="try"><div class="try-lab">Как попробовать и что проверить</div><ul><li>Откройте /storage в Claude desktop и посмотрите объём занятого места.</li><li>Адаптация редакции: проверьте предложенные к очистке задачи и worktrees и выберите только те, которые больше не нужны.</li><li class="measure">Измерение, адаптация редакции: сравните показанный объём занятого места до очистки и после неё.</li></ul></div><p class="why"><b>Ограничение:</b> Автор не приводит объём освобождённого места и не описывает возможность восстановления удалённых данных. Команда относится к desktop app.</p><div class="links"><a class="src" href="https://x.com/lydiahallie/status/2118045439803195567" target="_blank" rel="noopener">Главный пост ↗</a></div></article></div></section><section id="watch" class="wrap"><div class="shead rv"><h2>На что обратить внимание</h2></div><div class="watch"><div class="watch-item rv"><h4>Останавливайте цикл без прогресса и учитывайте повтор при resume</h4><p>watch: полный разбор IssueBot даёт самостоятельные механизмы stall exit, идемпотентного resume и ablation устаревших компонентов harness. Автор проверил graph на подставных командах, а на реальном репозитории не запускал. Сохраняем как подробный инженерный reference, без обещания готового запуска.</p><div class="links"><a class="src" href="https://x.com/0xwhrrari/status/2118327478250840140" target="_blank" rel="noopener">Главный пост ↗</a></div></div><div class="watch-item rv"><h4>Trusted issuer для MCP</h4><p>ClaudeDevs связывает автоподключение с доверием к Claude как issuer. Протокол, параметры валидации и отзыв доступа не раскрыты: перед настройкой нужна документация.</p><div class="links"><a class="src" href="https://x.com/ClaudeDevs/status/2117680635561312732" target="_blank" rel="noopener">Главный пост ↗</a></div></div><div class="watch-item rv"><h4>Сокращайте sprawling tools через code mode</h4><p>Thariq предлагает дать harness мощный API и один code-mode tool вместо множества мелких MCP tools. Это направление дизайна, без показанной реализации и проверки.</p><div class="links"><a class="src" href="https://x.com/trq212/status/2118878855650017522" target="_blank" rel="noopener">Главный пост ↗</a></div></div></div></section><section id="plan" class="wrap"><div class="shead rv"><h2>План на неделю</h2></div><div class="checks"><div class="check rv" role="checkbox" aria-checked="false" tabindex="0"><div class="box"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></div><div class="txt">Выбрать одну задачу и делегировать её с границами, proof of work и проверкой diff.</div><span class="when">ПН</span></div><div class="check rv" role="checkbox" aria-checked="false" tabindex="0"><div class="box"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></div><div class="txt">Проверить перенос знаний через wiki и независимую проверку одного модуля.</div><span class="when">СР</span></div></div></section><section class="wrap"><div class="shead rv"><h2>Как собран выпуск</h2></div><div class="meta rv"><p>Окно: 1–8 ноября 2026. Публикации X и авторские источники; практики адаптированы к backend/agent-разработке.</p><p>Тематический топ-60 проверен отдельно от собственных постов ключевых авторов. Второй проход искал guardrails, permissions, CI gates, восстановление и управление контекстом.</p><p>Отбор отличает подтверждённый принцип от готового запуска. Ограничения доступа и непроверенные детали отмечены в карточках.</p><p>Исходные цифры принадлежат авторам. Эксперименты редакции не являются замерами выпуска.</p></div></section><footer>X Weekly Digest · 2026-11-08 · публичные источники X и материалы авторов.</footer><div id="lb"><button class="close" aria-label="Закрыть изображение">×</button><img id="lbimg" src="" alt=""><div class="lbcap" id="lbcap"></div><a class="lbbtn" id="lbbtn" target="_blank" rel="noopener">Открыть источник ↗</a></div><script>
+(function(){
+  var prog=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;prog.style.width=((h.scrollTop)/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  var navlinks=[].slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=navlinks.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id='#'+e.target.id;navlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){if(s)spy.observe(s);});
+
+  // lightbox: data-full = картинка, data-href = твит
+  var lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg'),lbcap=document.getElementById('lbcap'),lbbtn=document.getElementById('lbbtn');
+  document.querySelectorAll('.shot[data-full]').forEach(function(s){
+    s.addEventListener('click',function(){
+      lbimg.src=s.getAttribute('data-full');
+      lbcap.textContent=s.getAttribute('data-cap')||'';
+      var href=s.getAttribute('data-href');
+      if(href){lbbtn.href=href;lbbtn.style.display='inline-flex';}else{lbbtn.style.display='none';}
+      lb.classList.add('on');
+    });
+  });
+  function close(){lb.classList.remove('on');lbimg.src='';}
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('close'))close();});
+  lbbtn.addEventListener('click',function(e){e.stopPropagation();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
+  document.querySelectorAll('.check').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('done');});});
+})();
+
+document.querySelectorAll(".shot").forEach(s=>s.addEventListener("click",()=>{const i=document.getElementById("lbimg");i.style.setProperty("max-width","min(94vw,"+(Number(s.dataset.fullWidth)/2)+"px)","important");i.style.setProperty("max-height","min(84vh,"+(Number(s.dataset.fullHeight)/2)+"px)","important");}));
+
+document.querySelectorAll(".check").forEach(c=>{c.addEventListener("click",()=>c.setAttribute("aria-checked",String(c.classList.contains("done"))));c.addEventListener("keydown",e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();c.click();}});});
+</script></body></html>
